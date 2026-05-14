@@ -4,22 +4,26 @@ export default function Portfolio() {
       title: "Chronic Kidney Disease Detection Research",
       desc: "Co-authored deep learning ensemble research focused on CKD detection from CT scans using hybrid model architectures and comparative evaluation.",
       tags: ["Deep Learning", "Medical AI", "Python", "Research"],
+      kaggle: "https://www.kaggle.com/code/favourdaniel/ensemble-of-deep-learning-models-for-kidney-diseas"
     },
     {
-      title: "Fake News Detection System",
-      desc: "Machine learning powered misinformation classification system using NLP pipelines and transformer-based text analysis.",
-      tags: ["NLP", "Machine Learning", "Python", "Transformers"],
+      title: "Fake News Detection System (BiLSTM)",
+      desc: "Built a BiLSTM-based fake news detection model using NLP preprocessing, embeddings, and sequence classification techniques.",
+      tags: ["NLP", "BiLSTM", "Machine Learning", "Python"],
+      github: "https://github.com/iconplaq/Fake_News_Detection_With_BiLSTM"
     },
     {
-      title: "Android Utility Applications",
-      desc: "Built Android applications with responsive interfaces, local storage, and API integrations focused on performance and usability.",
-      tags: ["Android", "Java", "Mobile Development"],
+      title: "Fake News Detection System (DistilBERT + Metadata Study)",
+      desc: "Investigated how metadata features influence fake news detection accuracy using DistilBERT and feature-enhanced experiments.",
+      tags: ["Transformers", "DistilBERT", "NLP", "Research"],
+      github: "https://github.com/iconplaq/Fake_News_Detection_Study_with_DistilBERT"
     },
     {
-      title: "Web Application Projects",
-      desc: "Developed modern responsive web apps with clean UI patterns, dashboards, and dynamic interactions.",
-      tags: ["React", "JavaScript", "Web Development"],
-    },
+      title: "Android Chat Application",
+      desc: "Built a real-time Android chat application with user authentication, messaging features, and responsive mobile UI design.",
+      tags: ["Android", "Java", "Firebase"],
+      github: "https://github.com/iconplaq/Mello"
+    }
   ];
 
   const skills = [
@@ -27,7 +31,7 @@ export default function Portfolio() {
     "Java",
     "Machine Learning",
     "Android Development",
-    "Web Development",
+    
     "Data Analysis",
     "Research Writing",
     "Linux",
@@ -99,22 +103,19 @@ export default function Portfolio() {
       <section className="max-w-7xl mx-auto px-6 pt-24 pb-20 min-h-[90vh] flex items-center">
         <div className="grid lg:grid-cols-2 gap-14 items-center w-full">
           <div>
-            <div className="inline-block px-4 py-2 rounded-full bg-white/10 border border-white/10 text-sm text-zinc-300 mb-6 glow">
-              AI • Software Engineering • Research
+            <div className="inline-block px-4 py-2 rounded-full bg-white/10 border border-white/10 text-sm text-zinc-300 mb-6">
+              Android Development • Machine Learning
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
-              Building systems that think, adapt, and solve.
-            </h1>
+           <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6"> Building systems that think, adapt, and solve. </h1>
 
             <p className="text-zinc-400 text-lg leading-relaxed max-w-2xl mb-10">
-              Computer Science graduate with experience in machine learning,
-              Android development, web applications, and technical research.
-              I enjoy turning complex ideas into practical digital tools with
-              clean architecture and human-centered design.
+              Computer Science graduate with interests in Android development,
+              machine learning, and intelligent systems. I enjoy building
+              practical applications and exploring how AI can solve real-world problems.
             </p>
 
-		<div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4">
               <a
                 href="/Favour_Daniel_CV.pdf"
                 target="_blank"
@@ -123,7 +124,6 @@ export default function Portfolio() {
                 Download CV
               </a>
 
-            
               <a
                 href="#projects"
                 className="px-7 py-4 rounded-2xl bg-indigo-500 hover:bg-indigo-400 transition font-semibold"
@@ -144,12 +144,12 @@ export default function Portfolio() {
             <div className="w-[320px] h-[320px] rounded-[3rem] bg-gradient-to-br from-indigo-500 via-cyan-400 to-purple-500 p-[2px] floating">
               <div className="w-full h-full rounded-[3rem] bg-zinc-950 flex items-center justify-center text-center p-8 border border-white/10">
                 <div>
-                  <div className="text-7xl mb-4">⚡</div>
+                  <div className="text-7xl mb-4">📱</div>
                   <h2 className="text-2xl font-bold mb-2">
-                    Builder + Researcher
+                    Mobile + AI
                   </h2>
                   <p className="text-zinc-400 text-sm leading-relaxed">
-                    From neural networks to production-ready interfaces.
+                    Focused on Android apps and machine learning projects.
                   </p>
                 </div>
               </div>
@@ -169,9 +169,8 @@ export default function Portfolio() {
             </p>
 
             <p className="text-zinc-400 leading-relaxed mb-5">
-              My interests orbit around machine learning, software engineering,
-              intelligent systems, and creating products that balance technical
-              depth with usability.
+              My interests revolve around machine learning, Android
+              development, and building software that is both practical and easy to use.
             </p>
 
             <p className="text-zinc-400 leading-relaxed">
@@ -220,8 +219,8 @@ export default function Portfolio() {
             Technical Arsenal
           </h2>
           <p className="text-zinc-400 max-w-2xl mx-auto">
-            A toolkit forged from debugging marathons, research experiments,
-            caffeinated coding sessions, and enough terminal windows to scare a browser.
+            Technologies and tools I’ve worked with across Android development,
+            machine learning, and software projects.
           </p>
         </div>
 
@@ -244,7 +243,7 @@ export default function Portfolio() {
               Featured Projects
             </h2>
             <p className="text-zinc-400 max-w-2xl">
-              Experiments, systems, and digital constructs stitched together with code and persistence.
+              A few projects and research works I’ve worked on so far.
             </p>
           </div>
         </div>
@@ -278,6 +277,30 @@ export default function Portfolio() {
                   </span>
                 ))}
               </div>
+
+              <div className="flex gap-4 mt-5">
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-indigo-300 hover:text-white transition"
+                  >
+                    GitHub →
+                  </a>
+                )}
+
+                {project.kaggle && (
+                  <a
+                    href={project.kaggle}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-cyan-300 hover:text-white transition"
+                  >
+                    Kaggle →
+                  </a>
+                )}
+              </div>
             </div>
           ))}
         </div>
@@ -295,14 +318,14 @@ export default function Portfolio() {
 
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="mailto:chibex063@gmail.com"
+              href="mailto:yourmail@example.com"
               className="px-7 py-4 rounded-2xl bg-white text-black font-semibold hover:scale-105 transition"
             >
               Send Email
             </a>
 
             <a
-              href="https://github.com/iconplaq"
+              href="https://github.com"
               target="_blank"
               className="px-7 py-4 rounded-2xl border border-white/15 hover:bg-white/10 transition"
             >
@@ -310,7 +333,7 @@ export default function Portfolio() {
             </a>
 
             <a
-              href="www.linkedin.com/in/favour-daniel-51753519a"
+              href="https://linkedin.com"
               target="_blank"
               className="px-7 py-4 rounded-2xl border border-white/15 hover:bg-white/10 transition"
             >
@@ -328,3 +351,4 @@ export default function Portfolio() {
     </div>
   );
 }
+
