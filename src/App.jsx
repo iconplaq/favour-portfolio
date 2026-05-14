@@ -114,7 +114,16 @@ export default function Portfolio() {
               clean architecture and human-centered design.
             </p>
 
-            <div className="flex flex-wrap gap-4">
+		<div className="flex flex-wrap gap-4">
+              <a
+                href="/Favour_Daniel_CV.pdf"
+                target="_blank"
+                className="px-7 py-4 rounded-2xl bg-white text-black font-semibold hover:scale-105 transition"
+              >
+                Download CV
+              </a>
+
+            
               <a
                 href="#projects"
                 className="px-7 py-4 rounded-2xl bg-indigo-500 hover:bg-indigo-400 transition font-semibold"
